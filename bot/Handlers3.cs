@@ -1,12 +1,10 @@
 using System.Threading.Tasks;
-
 using Microsoft.Extensions.Logging;
-
 using bot.Entity;
-
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
+using bot;
 
 namespace bot
 {
@@ -37,7 +35,6 @@ namespace bot
                 _logger.LogInformation($"User exists");
             }
 
-            var language = "";
             // var User = new BotUser(message.Chat.Id, message.From.Username, message.From.FirstName + message.From.LastName, message.Location.Longitude, message.Location.Latitude, string.Empty);
             if (message.Type == MessageType.Location && message.Location != null)
             {
